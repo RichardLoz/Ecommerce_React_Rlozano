@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import { BsCartPlusFill } from "react-icons/bs";
 import {
   Navbar,
   Container,
@@ -34,6 +34,10 @@ export const NavBar = () => {
             </NavDropdown>
             <Nav.Link href="#action8">Contacto</Nav.Link>
           </Nav>
+          <div className="cart">
+            <BsCartPlusFill className="cart" />
+          </div>
+
           <Form className="d-flex">
             <FormControl
               type="search"
