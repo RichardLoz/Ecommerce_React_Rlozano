@@ -9,7 +9,7 @@ function App() {
     <>
       <NavBar />
       <ItemListContainer greeting="Sky-Importaciones" />
-      <ItemCount />
+      <ItemCount stock={2} initial={0} />
     </>
   );
 }

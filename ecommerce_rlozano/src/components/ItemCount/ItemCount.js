@@ -1,14 +1,24 @@
 import React, { useState } from "react";
 
-export const ItemCount = () => {
-  const [count, setCount] = useState(1);
+export const ItemCount = ({ stock, initial }) => {
+  const [count, setCount] = useState(initial);
 
   const handleSuma = () => {
-    setCount(count + 1);
+    if (count < stock) {
+      setCount(count + 1);
+    }
   };
 
   const handleResta = () => {
-    setCount(count - 1);
+    if (count > initial) {
+      setCount(count - 1);
+    } else {
+      alert("No hay stock disponible");
+    }
+  };
+
+  const handleOnAdd = () => {
+    alert("Agregado al carrito");
   };
 
   return (
@@ -22,13 +32,15 @@ export const ItemCount = () => {
             <button onClick={handleResta} className="btn-primary">
               -
             </button>
-            <span className="font-bold"> {count} </span>
+            <span className="font-bold"> {count}</span>
             <button onClick={handleSuma} className="btn-primary">
               +
             </button>
           </div>
           <div>
-            <button className="mt-2 btn-success">Agregar al carrito</button>
+            <button onClick={handleOnAdd} className="mt-2 btn-success">
+              Agregar al carrito
+            </button>
           </div>
         </div>
       </div>
