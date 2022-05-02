@@ -8,8 +8,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <ItemListContainer greeting="Sky-Importaciones" />
-      <ItemCount stock={2} initial={0} />
+      <ItemListContainer />
     </>
   );
 }

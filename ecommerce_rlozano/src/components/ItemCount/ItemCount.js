@@ -25,7 +25,7 @@ export const ItemCount = ({ stock, initial }) => {
     <div className="container px-5 py-8 mx-auto">
       <div className="flex flex-col text-center w-full mb-12">
         <h1 className="sm:text=3xl text-2xl font-bold title-font mb">
-          Boton de compra
+          {/*      Boton de compra */}
         </h1>
         <div>
           <div>
