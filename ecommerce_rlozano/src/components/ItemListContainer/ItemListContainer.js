@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import { pedirDatos } from "../../Funciones/pedirDatos";
-import { Item } from "../Item/Item";
+import { ItemList } from "../ItemList/ItemList";
 
 export const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
+
     pedirDatos()
       .then((res) => {
         setProductos(res);
@@ -14,23 +17,11 @@ export const ItemListContainer = () => {
         console.log(err``);
       })
       .finally(() => {
-        console.log("Fin del proceso");
+        setLoading(false);
       });
   }, []);
 
   return (
-    <section className="item-list-container">
-      <div className="row mb-2">
-        {productos.map((el) => (
-          <Item
-            key={el.id}
-            nombre={el.nombre}
-            precio={el.precio}
-            img={el.img}
-            desc={el.desc}
-          />
-        ))}
-      </div>
-    </section>
+    <>{loading ? <h2>Cargando....</h2> : <ItemList productos={productos} />}</>
   );
 };
