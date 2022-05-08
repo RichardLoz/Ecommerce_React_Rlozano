@@ -1,7 +1,7 @@
 export const stock = [
   {
     id: 1,
-    nombre: "RedragonombrePandora 2",
+    nombre: "Red Dragon Pandora 2",
     precio: "14.000",
     desc: "320GB Slim",
     img: "/img/categorias/Auriculares/auri_1.jpg",

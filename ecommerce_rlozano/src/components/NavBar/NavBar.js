@@ -9,6 +9,7 @@ import {
   FormControl,
   Button,
 } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
 export const NavBar = () => {
   return (
@@ -22,17 +23,29 @@ export const NavBar = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Inicio</Nav.Link>
-            <Nav.Link href="#action2">Nosotros</Nav.Link>
+            <LinkContainer to="/">
+              <Nav.Link>Inicio</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/nosotros">
+              <Nav.Link>Nosotros</Nav.Link>
+            </LinkContainer>
             <NavDropdown title="Categorias" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Hogar</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">Tecnologia</NavDropdown.Item>
-              <NavDropdown.Item href="#action5">Ropa</NavDropdown.Item>
-              <NavDropdown.Item href="#action6">Calzado</NavDropdown.Item>
+              <LinkContainer to="productos/drone">
+                <NavDropdown.Item>Drones</NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to="productos/celulares">
+                <NavDropdown.Item>Celulares</NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to="productos/notebook">
+                <NavDropdown.Item>Notebook</NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to="productos/auriculares">
+                <NavDropdown.Item>Auriculares</NavDropdown.Item>
+              </LinkContainer>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action7">Proximamente</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#action8">Contacto</Nav.Link>
+            <Nav.Link href="/contacto">Contacto</Nav.Link>
           </Nav>
           <div className="cart">
             <BsCartPlusFill className="cart" />
