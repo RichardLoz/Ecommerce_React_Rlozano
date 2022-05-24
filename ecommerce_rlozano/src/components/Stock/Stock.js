@@ -14,7 +14,7 @@ export const stock = [
     precio: 15.999,
     desc: "320GB Slim",
     img: "/assets/categorias/Auriculares/auri_2.jpg",
-    stock: 10,
+    stock: 20,
     categoria: "auriculares",
   },
   {

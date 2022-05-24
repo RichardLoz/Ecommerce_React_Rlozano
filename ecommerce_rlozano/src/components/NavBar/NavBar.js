@@ -10,6 +10,7 @@ import {
   Button,
 } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+import { CartWidget } from "../CartWidget/CartWidget";
 
 export const NavBar = () => {
   return (
@@ -47,10 +48,7 @@ export const NavBar = () => {
             </NavDropdown>
             <Nav.Link href="/contacto">Contacto</Nav.Link>
           </Nav>
-          <div className="cart">
-            <BsCartPlusFill className="cart" />
-          </div>
-
+          <CartWidget />
           <Form className="d-flex">
             <FormControl
               type="search"

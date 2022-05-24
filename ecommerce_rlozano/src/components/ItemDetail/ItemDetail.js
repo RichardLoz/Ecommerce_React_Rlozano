@@ -1,6 +1,8 @@
+import { useContext, useState } from "react";
 import { ItemCount } from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
-import { Button, Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import { CartContext } from "../../context/CartContext";
 
 export const ItemDetail = ({
   id,
@@ -11,6 +13,26 @@ export const ItemDetail = ({
   stock,
   categoria,
 }) => {
+  const [cantidad, setCantidad] = useState(0);
+
+  const { agregarAlCarrito, isInCart } = useContext(CartContext);
+
+  const handleAgregar = () => {
+    /* TODO: Tecnica Early Return */
+    if (cantidad === 0) return;
+
+    if (!isInCart(id)) {
+      const addItem = {
+        id,
+        nombre,
+        precio,
+        stock,
+        cantidad,
+      };
+      agregarAlCarrito(addItem);
+    }
+  };
+
   return (
     <Container className="p-2 text-center">
       <br />
@@ -23,15 +45,27 @@ export const ItemDetail = ({
             <h3>{nombre}</h3>
             <h5>{desc}</h5>
             <h3>$ {precio}</h3>
-            <>
-              <br />
-              <br />
-              <Button as={Link} to="/cart" variant="secondary">
-                Terminar Compra
-              </Button>
-              <br />
-            </>
-            <ItemCount stock={stock} initial={1} />
+
+            {isInCart(id) ? (
+              <Link to="/cart" className="btn btn-success my-3">
+                Terminar mi compra
+              </Link>
+            ) : (
+              <>
+                <ItemCount
+                  stock={stock}
+                  counter={cantidad}
+                  setCounter={setCantidad}
+                />
+
+                <button
+                  className="btn btn-success my-2"
+                  onClick={handleAgregar}
+                >
+                  Agregar al carrito
+                </button>
+              </>
+            )}
 
             <br />
             <button
