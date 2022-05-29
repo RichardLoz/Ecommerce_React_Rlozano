@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 
 export const CartWidget = () => {
-  const { cantidadCart } = useContext(CartContext);
+  const { cantidadCart, cart } = useContext(CartContext);
 
   return (
-    <Link to="/cart" className="cart-widget">
+    <Link
+      to="/cart"
+      className={`cart-widget ${cart.length === 0 ? "cart-hidden" : ""}`}
+    >
       <BsFillCartPlusFill />
       <span>{cantidadCart()}</span>
     </Link>

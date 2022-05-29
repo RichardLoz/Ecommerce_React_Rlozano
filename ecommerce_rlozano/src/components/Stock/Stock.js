@@ -4,8 +4,8 @@ export const stock = [
     nombre: "Red Dragon Pandora 2",
     precio: "14.000",
     desc: "320GB Slim",
-    img: "/assets/Categorias/Auriculares/auri_1.jpg",
-    stock: 50,
+    img: "/assets/categorias/Auriculares/auri_1.jpg",
+    stock: 12,
     categoria: "auriculares",
   },
   {

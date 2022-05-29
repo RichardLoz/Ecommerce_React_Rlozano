@@ -61,6 +61,7 @@ export const ItemDetail = ({
                 <button
                   className="btn btn-success my-2"
                   onClick={handleAgregar}
+                  disabled={cantidad === 0}
                 >
                   Agregar al carrito
                 </button>

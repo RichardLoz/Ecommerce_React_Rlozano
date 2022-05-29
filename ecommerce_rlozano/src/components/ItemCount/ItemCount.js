@@ -1,5 +1,7 @@
+import { configBtns } from "../../Funciones/configBtns";
+
 export const ItemCount = ({ stock, min = 0, counter, setCounter }) => {
-  const handleSuma = () => {
+  const handleSuma = (e) => {
     if (counter < stock) {
       setCounter(counter + 1);
     }
@@ -13,6 +15,14 @@ export const ItemCount = ({ stock, min = 0, counter, setCounter }) => {
     }
   };
 
+  const { configRestar, configSumar } = configBtns(
+    counter,
+    stock,
+    min,
+    handleResta,
+    handleSuma
+  );
+
   return (
     <div className="container px-5 py-8 mx-auto">
       <div className="flex flex-col text-center w-full mb-12">
@@ -21,13 +31,9 @@ export const ItemCount = ({ stock, min = 0, counter, setCounter }) => {
         </h1>
         <div>
           <div>
-            <button onClick={handleResta} className="btn-primary">
-              -
-            </button>
+            <button {...configRestar}> - </button>
             <span className="font-bold"> {counter}</span>
-            <button onClick={handleSuma} className="btn-primary">
-              +
-            </button>
+            <button {...configSumar}>+</button>
           </div>
         </div>
       </div>
