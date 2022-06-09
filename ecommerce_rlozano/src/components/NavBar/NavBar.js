@@ -1,26 +1,18 @@
 import * as React from "react";
 import { BsCartPlusFill } from "react-icons/bs";
-import {
-  Navbar,
-  Container,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-} from "react-bootstrap";
+
 import { LinkContainer } from "react-router-bootstrap";
 import { CartWidget } from "../CartWidget/CartWidget";
 
 export const NavBar = () => {
-  return (
+  /*   return (
     <Navbar bg="primary" variant="dark" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#">Sky-Importaciones</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            className="me-auto my-2 my-lg-0"
+            className="me-auto my-2 my-lg-0 navbar"
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
@@ -49,17 +41,8 @@ export const NavBar = () => {
             <Nav.Link href="/contacto">Contacto</Nav.Link>
           </Nav>
           <CartWidget />
-          <Form className="d-flex">
-            <FormControl
-              type="search"
-              placeholder="Buscar"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Buscar</Button>
-          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  );
+  ); */
 };

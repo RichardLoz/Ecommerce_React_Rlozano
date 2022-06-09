@@ -1,9 +1,9 @@
-import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { BsStarFill, BsCartCheck } from "react-icons/bs";
 
-export const Item = ({ nombre, precio, img, desc, id }) => {
+export const Item = ({ nombre, precio, img, desc, id, categoria }) => {
   return (
-    <Card style={{ width: "18rem", margin: "16px" }}>
+    /*     <Card style={{ width: "18rem", margin: "16px" }}>
       <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>{nombre}</Card.Title>
@@ -12,9 +12,29 @@ export const Item = ({ nombre, precio, img, desc, id }) => {
         <Link to={`/detail/${id}`}>
           <Button variant="primary">Ver mas</Button>
         </Link>
-
-        {/* <ItemCount stock={2} initial={0} /> */}
       </Card.Body>
-    </Card>
+    </Card> */
+    <div>
+      <div className="pro">
+        <img src={img} />
+        <div className="des">
+          <span>{categoria}</span>
+          <h5>{nombre}</h5>
+          <div className="star">
+            <BsStarFill />
+            <BsStarFill />
+            <BsStarFill />
+            <BsStarFill />
+            <BsStarFill />
+          </div>
+          <h4>${precio}</h4>
+        </div>
+        <div className="cart">
+          <Link to={`/detail/${id}`}>
+            <BsCartCheck />
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 };
