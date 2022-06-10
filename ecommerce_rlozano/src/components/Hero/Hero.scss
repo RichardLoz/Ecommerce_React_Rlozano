@@ -1,9 +1,11 @@
-.hero {
-  background-image: url("../../../public/assets/Categorias/Drone/drone_5.png");
+#hero {
+  background-image: url("../../../public/assets/Categorias/Drone/drone_5.png") !important;
+  background: #e3e6f3;
   height: 90vh;
   width: 100%;
-  background-size: cover;
-  background-position: top 25% right 0;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: top 55% left 100%;
   padding: 0 80px;
   display: flex;
   flex-direction: column;
@@ -11,15 +13,15 @@
   justify-content: center;
 }
 
-.hero h4 {
+#hero h4 {
   padding-bottom: 15px;
 }
 
-.hero h1 {
+#hero h1 {
   color: #088178;
 }
 
-.hero button {
+#hero button {
   background-image: url("../../../public/assets/Body/button.png");
   background-color: transparent;
   color: #088178;

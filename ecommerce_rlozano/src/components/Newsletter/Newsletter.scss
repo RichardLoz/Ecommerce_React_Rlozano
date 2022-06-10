@@ -1,0 +1,50 @@
+.bg-seccion {
+  background-color: rgb(221, 109, 109);
+  padding: 100px 40px;
+  color: white;
+}
+
+.bg-seccion h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+.bg-seccion p {
+  font-size: 25px;
+}
+
+.email-box {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.email-box i {
+  background: #2f3542;
+  width: 40px;
+  line-height: 40px;
+}
+
+.tbox,
+.btn_2 {
+  border: none;
+  outline: none;
+}
+
+.tbox {
+  width: 0px;
+  transition: 0.6s;
+}
+
+.email-box:hover > .tbox,
+.tbox:focus {
+  width: 260px;
+  padding: 0 10px;
+}
+
+.btn_2 {
+  background: #2f3542;
+  padding: 0 10px;
+  color: var(--white);
+  text-transform: uppercase;
+  cursor: pointer;
+}

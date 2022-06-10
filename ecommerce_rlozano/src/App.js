@@ -10,14 +10,20 @@ import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetail
 import { CartProvider } from "./context/CartContext";
 import { Cart } from "./components/Cart/Cart";
 import { CheckOut } from "./components/checkout/CheckOut";
-import { Home } from "./components/Home/Home";
-import { NavBar2 } from "./components/NavBar2/NavBar2";
+import { Hero } from "./components/Hero/Hero";
+import { Feature } from "./components/Feature/Feature";
+import { Newsletter } from "./components/Newsletter/Newsletter";
+import { Banner } from "./components/Banner/Banner";
+import { ItemList } from "./components/ItemList/ItemList";
 
 function App() {
   return (
     <CartProvider>
       <BrowserRouter>
-        <NavBar2 />
+        <NavBar />
+        <Hero />
+        <Feature />
+        <Newsletter />
 
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
@@ -27,12 +33,14 @@ function App() {
           <Route path="/categorias/drone " />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/itemList" element={<ItemList />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<CheckOut />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/newsletter" element={<Newsletter />} />
           {/* Navigate lo uso para llevar a la pagina de inicio al usuario en el caso de que quiera entrar a un sector invalido */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
+        <Banner />
       </BrowserRouter>
     </CartProvider>
   );
