@@ -15,6 +15,8 @@ import { Feature } from "./components/Feature/Feature";
 import { Newsletter } from "./components/Newsletter/Newsletter";
 import { Banner } from "./components/Banner/Banner";
 import { ItemList } from "./components/ItemList/ItemList";
+import { Footer } from "./components/Footer/Footer";
+import { Comentario } from "./components/Comentarios/Comentario";
 
 function App() {
   return (
@@ -41,6 +43,8 @@ function App() {
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Banner />
+        <Comentario />
+        <Footer />
       </BrowserRouter>
     </CartProvider>
   );

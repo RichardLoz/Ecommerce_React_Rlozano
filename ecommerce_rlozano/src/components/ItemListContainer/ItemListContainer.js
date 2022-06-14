@@ -39,11 +39,4 @@ export const ItemListContainer = () => {
   return (
     <>{loading ? <h2>Cargando....</h2> : <ItemList productos={productos} />}</>
   );
-
-  /* TODO: Sintaxis Early Return */
-  /* if (loading) {
-    return <h2>Cargando....</h2>;
-  }
-
-  return <ItemList productos={productos} />; */
 };

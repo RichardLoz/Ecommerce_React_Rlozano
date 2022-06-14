@@ -12,6 +12,10 @@ export const Banner = () => {
           <button className="normal">Quiero mi descuento</button>
         </Link>
       </div>
+      <div class="testimonios__header bg-light">
+        <span>Nuevos productos</span>
+        <h2>PROXIMAMENTE</h2>
+      </div>
       <div id="sm-banner" className="section-p1">
         <div className="banner-box">
           <h4>Texto-1</h4>
@@ -20,7 +24,7 @@ export const Banner = () => {
           <button className="white">Proximamente</button>
         </div>
 
-        <div className="banner-box">
+        <div className="banner-box banner-box2">
           <h4>Texto-1</h4>
           <h2>Texto2</h2>
           <span>Texto3</span>

@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { ItemCount } from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
 
 import { CartContext } from "../../context/CartContext";
 
@@ -13,6 +14,11 @@ export const ItemDetail = ({
   stock,
   categoria,
 }) => {
+  const detail = (smallImg) => {
+    let fullImg = document.getElementById("imageBox");
+    fullImg.src = smallImg.src;
+  };
+
   const [cantidad, setCantidad] = useState(0);
 
   const { agregarAlCarrito, isInCart } = useContext(CartContext);
@@ -33,12 +39,21 @@ export const ItemDetail = ({
     }
   };
 
-  /* return (
+  return (
     <Container className="p-2 text-center">
       <br />
       <Row className="gx-5  shadow p-3 mb-5 bg-white rounded">
         <Col>
-          <img src={img} alt="Producto de Sky-Importaciones" />
+          <div className="product">
+            <div className="img-container">
+              <img id="imageBox" src={img} />
+            </div>
+            <div className="product-small-img">
+              <img src={img} />
+              <img src={img} />
+              <img src={img} />
+            </div>
+          </div>
         </Col>
         <Col>
           <div className="text-center">
@@ -90,5 +105,5 @@ export const ItemDetail = ({
         </Col>
       </Row>
     </Container>
-  ); */
+  );
 };

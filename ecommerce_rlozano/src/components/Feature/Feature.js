@@ -23,7 +23,7 @@ export const Feature = () => {
       </div>
       <div className="fe-box">
         <img src="/assets/Features/f6.png" alt="" />
-        <h6>Soporte 24hs</h6>
+        <h6>Brindamos Soporte 24hs </h6>
       </div>
     </section>
   );

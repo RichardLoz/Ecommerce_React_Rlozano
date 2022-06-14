@@ -1,11 +1,19 @@
 export const Hero = () => {
   return (
-    <section id="hero">
-      <h4>Sky-Importaciones</h4>
-      <h2>Super ofertas todos los dias</h2>
-      <h1>En todos los productos</h1>
-      <p>Cupones de descuento & 70% OFF</p>
-      <button>Catalogo</button>
-    </section>
+    <div
+      id="carouselExampleIndicators"
+      className="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div className="carousel-inner">
+        <div className="carousel-item active">
+          <img
+            src="../assets/Body/carousel_3.jpg"
+            className="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+    </div>
   );
 };

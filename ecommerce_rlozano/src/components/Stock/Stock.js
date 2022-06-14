@@ -109,7 +109,7 @@ export const stock = [
   },
   {
     id: 13,
-    nombre: "Asus Rog Strix G533qs",
+    nombre: "Asus Rog Strix G533",
     precio: "1.066.000",
     desc: "320GB Slim",
     img: "/assets/categorias/Notebook/nbk_2.jpg",
