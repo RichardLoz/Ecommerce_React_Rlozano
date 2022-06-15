@@ -25,7 +25,6 @@ function App() {
         <NavBar />
         <Hero />
         <Feature />
-        <Newsletter />
 
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
@@ -42,6 +41,7 @@ function App() {
           {/* Navigate lo uso para llevar a la pagina de inicio al usuario en el caso de que quiera entrar a un sector invalido */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
+        <Newsletter />
         <Banner />
         <Comentario />
         <Footer />
