@@ -18,16 +18,16 @@ export const Banner = () => {
       </div>
       <div id="sm-banner" className="section-p1">
         <div className="banner-box">
-          <h4>Texto-1</h4>
-          <h2>Texto2</h2>
-          <span>Texto3</span>
+          <h4>Para Ellas</h4>
+          <h2>Coleccion</h2>
+          <span>Verano '23</span>
           <button className="white">Proximamente</button>
         </div>
 
         <div className="banner-box banner-box2">
-          <h4>Texto-1</h4>
-          <h2>Texto2</h2>
-          <span>Texto3</span>
+          <h4>Para todos</h4>
+          <h2>Abrigos</h2>
+          <span>Unisex</span>
           <button className="white">Proximamente</button>
         </div>
       </div>

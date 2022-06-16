@@ -8,3 +8,14 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
+.product-grid-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  display: flex;
+  padding: 0 8%;
+}
